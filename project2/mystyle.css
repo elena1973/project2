@@ -1,0 +1,257 @@
+
+body{
+  margin: 0px;
+  background-image: url("imgs/1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+nav {
+  text-align:left;
+}
+header {
+ position: relative;
+ text-align:left;
+}
+
+
+header>div{
+  font-size: 75px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  color: indigo;
+  
+}
+input{
+  height: 45px;   
+}
+
+#panel{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap:wrap;
+}
+
+
+#coinCard{
+  border: indigo 2px solid;
+  width: 300px;
+  height:150px;
+  margin: 2px;
+}
+
+#nameArea{
+  font-size: 18px;
+  font-family: cursive;
+  margin: 10px;
+  font-weight: bold;
+  color: indigo;
+}
+
+#symbolArea{
+      font-size: 18px;
+      font-family: cursive;
+      margin: 10px;
+      font-weight: bold;
+      color: indigo
+}
+
+#moreInfo{
+  position: static;
+  height: 40px;
+  margin:10px;
+  color: rgb(18, 78, 36);
+  background-color: peru;
+  border: rgb(18, 78, 36) solid 1px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#moreInfo:hover{
+  
+  background-color: coral;
+  border: rgb(18, 78, 36) solid 1px;
+}
+
+.switch {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  bottom: 85px;
+  left: 80px;
+  margin:15px;
+  
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: lightsteelblue;
+  -webkit-transition: .4s;
+  transition: .4s;
+
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(0, 0, 0);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(18, 78, 36);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(33, 243, 121);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  background-color: rgb(63, 205, 87);
+}
+
+.cover{
+    border: white 2px solid;
+    width: 297px;
+    height:149px;
+    background-color: hsl(184, 87%, 47%);
+    opacity: 1;
+    position: absolute;
+}
+
+#currencyArea{
+  padding: 5px;
+  margin:5px;
+  width: 200px;
+  height: 65px;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+#backbtn{
+  position:relative;
+  left:210px;
+  top: 75px;
+  
+}
+.img{
+  position:relative;
+  margin:5px;
+  top: 5px;
+  right:65px;
+}
+
+#modal{
+  height: 100%;
+  width:  100%;
+  position:absolute;
+  display:block;
+  z-index: 1000;
+  opacity:1;
+  }
+
+#backbtn2{
+  float:right;
+}
+
+#innerDiv{
+  margin: auto;
+  height: 500px;
+  width:530px;
+  background-color: black;
+  color: white;
+  font-family: cursive;
+  font-weight: bold;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  text-align: center;
+  border:2px solid yellow;
+  font-size: 20px;
+}
+
+#innerDiv2{
+  height: 500px;
+  width:1750px;
+  margin: auto;
+  font-family: cursive;
+  font-weight: bold;
+  position:absolute;
+  top:0px;
+  right:0px;
+  left:0px;
+  bottom: 0px;
+  text-align: center;
+  color:rgb(0, 128, 11);
+}
+
+#chartContainer{
+  position:absolute;
+  top:150px;
+}
+
+
+div[selectedagain="selected"]>label{
+  position:sticky;
+  float:right;
+  margin:3px;
+}
+
+div[notselected="notselected"]>label{
+  position:sticky;
+  float:right;
+  margin:3px;
+}
+
+#Top {
+  display: none; 
+  position: fixed;
+  bottom: 20px; 
+  right: 30px;
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: rgb(0, 255, 128);
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px;
+  font-size: 18px; 
+}
+
+#Top:hover {
+  background-color: #555; 
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="pace.js"></script>
+    <link rel="stylesheet" href="loadingbar.css">
+    <title>CryptoComparer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"> </script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+    <div class="parallaxtop">
+
+        <header>
+                        <div>   BitCoin</div>
+        </header>
+
+        <nav>
+            
+            <input type="text" placeholder="Search" id="searchTerm" autofocus>
+            <button class="btn btn-lg btn-warning" id="search" onclick="findIt()"> Search</button>
+            <button class="btn btn-lg btn-primary" onclick="restart()">clear</button>
+            <button class="btn btn-lg btn-danger" onclick="graphs()">graphs</button>
+            <hr>
+        </nav>
+        <br>
+    </div>
+    <div class="parallaxbottom">
+        <div id="panel"></div>
+    </div>
+
+
+    <script src="Coingrab.js"></script>
+    <script src="Modalstuff.js"></script>
+    <script src="graphs.js"></script>
+    <button onclick="topFunction()" id="Top" title="Go to top">Top</button>
+    <script>
+
+        window.onload = callAPIForAll;
+        var data;
+        var coincounter = 0;
+        var clicked;
+        var internalcount = 5;
+        var stop;
+
+        function restart() {
+            location.reload();
+        }
+
+        function stopIt() {
+            clearInterval(stop);
+        }
+
+        function findIt() {
+            searchterm = document.getElementById("searchTerm").value;
+            find = document.getElementsByName(searchterm);
+            find[0].scrollIntoView();
+            $("div[name=" + searchterm + "]").effect("highlight", {}, 2000);
+        }
+
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("Top").style.display = "block";
+            } else {
+                document.getElementById("Top").style.display = "none";
+            }
+        }
+
+       
+        function topFunction() {
+           
+            document.documentElement.scrollTop = 0; 
+        }
+    </script>
+
+</body>
+
+</html>
